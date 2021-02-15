@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Brooklyn The Virual Robot</title>
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="differ.css">
+</head>
+
+<body>
+	<section id="intro">
+		<div class="intro"></div>
+		<div class="container">
+			<img src="./Img/robot.png" alt="">
+			<h1>Hello, I am Brooklyn, Your Virtual Assistant</h1>
+
+			<h3>As For now, I can only do simple works. But, I am Sure that my master will develop me more within a very
+				short span of time.</h3>
+
+		</div>
+	</section>
+
+	<section id="todo">
+
+		<div class="todo-container">
+			<div class="sec_title">
+				<h2>Sir, My Master has taught me how to store someone's data.</h2>
+				<h4>You can Store Your daily routine inside me.</h4>
+			</div>
+			<div class="todo-row">
+				<div class="todo-left">
+					<form class="todo">
+						<input type="text" autocomplete="off" name="task" placeholder="What do you want to do?">
+						<button type="submit" name="submit">+</button>
+					</form>
+
+					<div class="body">
+						<ul>
+							<li><span class="remove">X</span></li>
+							<li><span class="remove">X</span></li>
+							<li class="done"><span class="remove">X</span></li>
+							<li><span class="remove">X</span></li>
+							<li class="done"><span class="remove">X</span></li>
+							<li><span class="remove">X</span></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="todo-right">
+					<img src="./Img/robot-right.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<section id="calc">
+		<div class="container-calc">
+			<div class="calc-title">
+				<h1>Sir, I can Also Calculate For You!</h1>
+			</div>
+			<div class="calc-cont">
+				<form class="calculator" name="calc">
+					<input class="value" type="text" placeholder="Let's Type Some Numbers" name="txt" readonly="">
+					<span class="num clear" onclick="document.calc.txt.value = '' ">Clear</span>
+					<span class="num" onclick="document.calc.txt.value += '/' ">/</span>
+					<span class="num" onclick="document.calc.txt.value += '*' ">*</span>
+					<span class="num" onclick="document.calc.txt.value += '7' ">7</span>
+					<span class="num" onclick="document.calc.txt.value += '8' ">8</span>
+					<span class="num" onclick="document.calc.txt.value += '9' ">9</span>
+					<span class="num" onclick="document.calc.txt.value += '-' ">-</span>
+					<span class="num" onclick="document.calc.txt.value += '4' ">4</span>
+					<span class="num" onclick="document.calc.txt.value += '5' ">5</span>
+					<span class="num" onclick="document.calc.txt.value += '6' ">6</span>
+					<span class="num plus" onclick="document.calc.txt.value += '+' ">+</span>
+					<span class="num" onclick="document.calc.txt.value += '3' ">3</span>
+					<span class="num" onclick="document.calc.txt.value += '2' ">2</span>
+					<span class="num" onclick="document.calc.txt.value += '1' ">1</span>
+					<span class="num" onclick="document.calc.txt.value += '0' ">0</span>
+					<span class="num" onclick="document.calc.txt.value += '00' ">00</span>
+					<span class="num" onclick="document.calc.txt.value += '.' ">.</span>
+					<span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value) ">=</span>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<section id="clock">
+		<div class="clk-container">
+			<div class="clk-title">
+				<h1>Sir, Mysterious Thing Time is</h1>
+			</div>
+			<div class="clock">
+				<div class="hour">
+					<div class="hr" id="hr"></div>
+				</div>
+		
+				<div class="min">
+					<div class="mn" id="mn"></div>
+				</div>
+		
+				<div class="sec">
+					<div class="sc" id="sc"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="unit_convert">
+		<div class="uc_container">
+			<div class="uc_title">
+				<h1>Sir, I am bit Expert in Conversions</h1>
+				<h4>Whenever you want I can ready Convert</h4>
+			</div>
+
+			<div class="convert">
+				<h5>Give Me two Unit to convert <select name="unit" id="unit_select"></select> <i class="fa fa-arrow-right"></i> <select name="" id=""></select></h5>
+				<label for="con_input">Type to convert</label><br>
+				<input type="number"><br>
+				<textarea name="" id="" cols="30" rows="2" readonly >Your Result will be shown here</textarea>
+			</div> 
+		</div>
+	</section>
+	<!-- JS Links -->
+	<script src="differ.js"></script>
+	<!-- Font Awesome CDN -->
+	<script src="https://use.fontawesome.com/eddf3e2c99.js"></script>
+</body>
+
+</html>

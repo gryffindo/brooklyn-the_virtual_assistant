@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+.intro {
+	background: url(./Img/background_robot.jpg) ;
+	min-height: 100vh;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	opacity: 0.2;
+}
+.container {
+	padding: 0 180px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: right;
+}
+.container h1 {
+	font-size: 3rem;
+	color: #333;
+	margin-bottom: 1.3rem;
+}
+.container img {
+	margin: 3rem 0;
+}
+.container h3 {
+	font-size: 1rem;
+	color: #555;
+	letter-spacing: 1.2px;
+}
+/* To DO List Start */
+#todo {
+	padding: 5rem 0;
+	min-height: 40rem;
+	background: #091921;
+	color: #fff !important;
+}
+
+.todo-container {
+	padding: 0 200px;
+}
+.todo-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.todo-left {
+	flex-basis: 50%;
+}
+
+.todo-right {
+	flex-basis: 50%;
+}
+.todo-right img {
+	width: 100%;
+}
+
+.sec_title {
+	width: 100%;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.sec_title h2 {
+	color: #fff;
+	font-size: 2.5rem;
+}
+
+.sec_title h4 {
+	color: #555;
+	font-size: 1.2rem;
+	letter-spacing: 1.1px;
+}
+.todo input{
+	padding: 1rem 7rem;
+	border-radius: 50px;
+	font-size: 1.4rem;
+	color: #111;
+}
+.todo input:focus {
+	outline: none;
+}
+.todo button {
+	right: 105px;
+	padding: 10px 3rem;
+	font-size: 1rem;
+	border-radius: 50px	;
+	background-color: #4CAF50;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	margin: 1rem 0;
+	border: 3px solid #4CAF50;
+	transition: .4s;
+}
+
+.todo button:focus {
+	outline: none;
+}
+.todo button:hover {
+	border: 3px solid #4CAF50;
+	background-color: #fff;
+	color: #111;
+}
+.body ul {
+	list-style: none;
+}
+.body ul li {
+	margin-bottom: 23px;
+}
+.remove {
+	background-color: red;
+	border-radius: 100%;
+	padding: 10px 1rem;
+	cursor: pointer;
+	margin-right: 10px;
+	opacity: 0;
+	transition: .4s;
+}
+.remove:hover {
+	background-color: #333;
+	color: #fff;
+}
+.body ul li:hover .remove{
+	opacity: 1;
+}
+/* To Do List End */
+
+/* Calculator Start */
+.calculator {
+	position: relative;
+	display: grid;
+}
+
+.calculator .value {
+	grid-column: span 4;
+	height: 100px;
+	text-align: right;
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 18px;
+}
+
+.calculator span  {
+	display: grid;
+	width: 60px;
+	height: 60px;
+	color: #fff;
+	background: #0c2835;
+	place-items: center;
+	border: 1px solid rgba(0, 0, 0, .2);
+	cursor: pointer;
+	transition: .4s;
+}
+.calculator span:hover {
+	background-color: #74ff3b;
+	color: #333;
+}
+.calculator span:active {
+	background: red;
+	color: #333;
+
+}
+
+.calculator span.clear {
+	grid-column: span 2;
+	width: 120px;
+	background: #ff3077;
+}
+
+.calculator span.plus {
+	grid-row: span 2;
+	height: 120px;
+}
+
+.calculator span.equal {
+	background: #03b1ff;
+}
+
+#calc {
+	padding-top: 3rem;
+	padding-bottom: 14rem;
+	background: #091921;
+}
+.calc-cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-height: 100vh;
+
+}
+
+.calc-title h1 {
+	color: #fff;
+	text-align: center;
+	font-size: 4rem;
+	margin-bottom: 3rem;
+}
+/* Calculator End */
+
+/* Clock Start */
+/*  */
+#clock {
+	position: relative;
+}
+.clk-container {
+	padding: 0 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #091921;
+}
+
+.clk-title{
+	color: #fff;
+	position: absolute;
+	top: 0;
+	font-size: 3rem;
+	text-align: center;
+}
+.clock {
+	width: 350px;
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url(./Img/clock.png);
+	background-size: cover;
+	border: 1px solid #091921;
+	border-radius: 50%;
+	box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+				inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+				 0 15px 15px rgba(0, 0, 0, 0.3),
+				inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+.clock:before {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 50%;
+	z-index: 10000;
+}
+
+.hour,
+.min,
+.sec {
+	position: absolute;
+
+}
+.hour, .hr {
+	width: 160px;
+	height: 160px;
+
+}
+
+.min, .mn {
+	width: 160px;
+	height: 160px;
+	
+}
+
+.sec, .sc {
+	width: 230px;
+	height: 230px;
+	
+}
+
+.hr, .mn, .sc {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.hr:before {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 70px;
+	background: #ff105e;
+	z-index: 10;
+	border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+	content: '';
+	position: absolute;
+	width: 4px;
+	height: 100px;
+	background: #fff;
+	z-index: 11;
+	border-radius: 6px 6px 0 0;
+}
+
+.sc:before {
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 130px;
+	background: #fff;
+	z-index: 12;
+	border-radius: 6px 6px 0 0;
+}
+/* Clock End */
+
+/* Converter Start */
+#unit_convert {
+	background: #091921;
+	min-height: calc(100vh - 3rem);
+	padding-top: 3rem;
+}
+
+.uc_title h1{
+	color: #fff;
+	font-size: 4rem;
+	text-align: center;
+}
+
+.uc_title h4 {
+	color: #ddd;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 4rem;
+}
+/* Converter End */
